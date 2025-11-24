@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="scroll-smooth"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Cycle It - Track · Predict · Remind</title>
+    <meta
+      name="description"
+      content="Cycle It - Cross-platform recurring task manager. Track history, predict cycles, and get timely reminders."
+    />
+
+    <link
+      href="./output.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      }
+      /* 隐藏滚动条但保留功能 */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      @media (prefers-color-scheme: dark) {
+        ::-webkit-scrollbar-thumb {
+          background: #475569;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="text-slate-600 bg-slate-50 dark:text-slate-300 dark:bg-darkbg transition-colors duration-300"
+  >
+    <nav
+      class="fixed w-full z-50 bg-white/80 dark:bg-darkbg/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-arrows-spin text-blue-600 text-2xl"></i>
+            <span class="font-bold text-xl text-slate-900 dark:text-white"
+              >Cycle It</span
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="https://github.com/Siriusq/cycle_it"
+              target="_blank"
+              class="text-slate-500 hover:text-black dark:hover:text-white transition"
+            >
+              <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <button
+              onclick="toggleLanguage()"
+              class="px-3 py-1 rounded border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            >
+              <span id="lang-btn-text">中文</span>
+              <i class="fa-solid fa-language ml-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-28 pb-12 md:pt-40 md:pb-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div class="lg:w-5/12 text-center lg:text-left z-10">
+            <div
+              class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider text-blue-600 bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 rounded-full uppercase"
+            >
+              v1.0.1 Released
+            </div>
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6"
+            >
+              <span class="lang-en inline-block whitespace-nowrap">
+                Cycle It
+              </span>
+              <span class="lang-cn hidden inline-block whitespace-nowrap">
+                循物
+              </span>
+            </h1>
+            <p
+              class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            >
+              <span class="lang-en"> Track · Predict · Remind </span>
+              <span class="lang-cn hidden"> 追踪 · 预测 · 提醒 </span>
+              <br />
+              <span class="lang-en">
+                Keep your recurring tasks organized, helping you avoid both
+                forgetfulness and waste.
+              </span>
+              <span class="lang-cn hidden">
+                记录物品使用历史，智能预测下次日期，按时发送提醒。让生活井井有条，告别遗忘与尴尬。
+              </span>
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <a
+                href="#download"
+                class="px-8 py-3 bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 hover:bg-blue-700 hover:shadow-blue-600/40 transition transform hover:-translate-y-0.5"
+              >
+                <i class="fa-solid fa-download mr-2"></i>
+                <span class="lang-en">Download</span>
+                <span class="lang-cn hidden">立即下载</span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="lg:w-7/12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mt-8 lg:mt-0"
+          >
+            <img
+              src="./mobile_preview.png"
+              alt="Mobile App"
+              class="w-full max-w-[140px] h-auto object-contain z-10"
+            />
+
+            <img
+              src="./laptop_preview.png"
+              alt="Desktop App"
+              class="w-full max-w-[500px] h-auto object-contain z-10"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="features"
+      class="py-20 bg-white dark:bg-darkcard border-t border-slate-100 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white">
+            <span class="lang-en">More Than Just Recording</span>
+            <span class="lang-cn hidden">不仅仅是简单的记录</span>
+          </h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">
+            <span class="lang-en">
+              Comprehensive usage cycle management for your belongings.
+            </span>
+            <span class="lang-cn hidden">全方位管理你的物品使用周期。</span>
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4"
+            >
+              <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+              <span class="lang-en">Smart Prediction</span>
+              <span class="lang-cn hidden">智能预测</span>
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              <span class="lang-en">
+                Automatically estimates the next due date based on your usage
+                history and reminds you on time.
+              </span>
+              <span class="lang-cn hidden">
+                基于你的历史使用习惯，自动推算下一次需要维护或更换的时间，并在到期时提醒你。
+              </span>
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-purple-50 dark:hover:bg-slate-800 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-purple-100 dark:bg-purple-900/40 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4"
+            >
+              <i class="fa-solid fa-chart-simple text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+              <span class="lang-en">Data Visualization</span>
+              <span class="lang-cn hidden">数据可视化</span>
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              <span class="lang-en">
+                Visualize usage patterns with heatmap calendars and monthly bar
+                charts.
+              </span>
+              <span class="lang-cn hidden">
+                提供热力图日历、月度柱状图等统计图表，直观展示你的物品使用频率和周期变化。
+              </span>
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-green-50 dark:hover:bg-slate-800 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-lg flex items-center justify-center text-green-600 dark:text-green-400 mb-4"
+            >
+              <i class="fa-solid fa-mobile-screen text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+              <span class="lang-en">Cross-Platform</span>
+              <span class="lang-cn hidden">多平台支持</span>
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              <span class="lang-en">
+                Available on iOS, Android, Windows, and macOS. Import/Export
+                your data anytime, anywhere.
+              </span>
+              <span class="lang-cn hidden">
+                支持 iOS, Android, Windows 和 macOS。随时随地导入/导出你的数据
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="download"
+      class="py-24 bg-slate-50 dark:bg-darkbg"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white">
+            <span class="lang-en">Get Cycle It</span>
+            <span class="lang-cn hidden">下载 Cycle It</span>
+          </h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400">v1.0.1</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div
+            class="bg-white dark:bg-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200 dark:border-slate-700 flex flex-col h-full"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400"
+              >
+                <i class="fa-brands fa-android text-xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                Android
+              </h3>
+            </div>
+            <p
+              class="text-sm text-slate-500 dark:text-slate-400 mb-6 flex-grow"
+            >
+              <span class="lang-en">
+                Direct APK download. Requires background permission for
+                notifications.
+              </span>
+              <span class="lang-cn hidden">
+                直接下载 APK 安装包。需授予后台运行权限以确保提醒正常。
+              </span>
+            </p>
+            <div class="mt-auto">
+              <a
+                href="https://github.com/Siriusq/cycle_it/releases/download/1.0.1/Cycle.It.1.0.1.apk"
+                class="w-full block text-center py-2.5 bg-green-600 text-white dark:text-slate-900 font-semibold rounded-lg hover:bg-green-700 transition"
+              >
+                APK
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200 dark:border-slate-700 flex flex-col h-full"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-900 dark:text-white"
+              >
+                <i class="fa-brands fa-apple text-xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                iOS
+              </h3>
+            </div>
+            <p
+              class="text-sm text-slate-500 dark:text-slate-400 mb-6 flex-grow"
+            >
+              <span class="lang-en">
+                Sideload via AltStore. Requires weekly refresh.
+              </span>
+              <span class="lang-cn hidden">
+                通过 AltStore 进行侧载。未上架 App Store，需定期刷新签名。
+              </span>
+            </p>
+            <div class="mt-auto grid grid-cols-2 gap-2">
+              <a
+                href="https://github.com/Siriusq/cycle_it/releases/download/1.0.1/CycleIt.ipa"
+                class="w-full block text-center py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold rounded-lg hover:opacity-90 transition"
+              >
+                IPA
+              </a>
+              <a
+                href="https://faq.altstore.io/"
+                target="_blank"
+                class="w-full block text-center py-2.5 border border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition"
+              >
+                Help
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200 dark:border-slate-700 flex flex-col h-full"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-900 dark:text-white"
+              >
+                <i class="fa-brands fa-apple text-xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                macOS
+              </h3>
+            </div>
+            <p
+              class="text-sm text-slate-500 dark:text-slate-400 mb-6 flex-grow"
+            >
+              <span class="lang-en">
+                Supports macOS 10.14+. Install via DMG file.
+              </span>
+              <span class="lang-cn hidden">
+                支持 macOS 10.14+。下载 DMG 镜像文件拖拽安装。
+              </span>
+            </p>
+            <div class="mt-auto">
+              <a
+                href="https://github.com/Siriusq/cycle_it/releases/download/1.0.1/Cycle.It.1.0.1.dmg"
+                class="w-full block text-center py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold rounded-lg hover:opacity-90 transition"
+              >
+                DMG
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-darkcard p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200 dark:border-slate-700 flex flex-col h-full relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 text-[10px] font-bold px-2 py-1 rounded-bl"
+            >
+              CERT REQ
+            </div>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400"
+              >
+                <i class="fa-brands fa-windows text-xl"></i>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                Windows
+              </h3>
+            </div>
+            <p
+              class="text-sm text-slate-500 dark:text-slate-400 mb-6 flex-grow"
+            >
+              <span class="lang-en">
+                MSIX package. <b>Certificate installation required</b> before
+                installing app.
+              </span>
+              <span class="lang-cn hidden">
+                MSIX 格式。由于限制，安装应用前<b>必须先手动安装个人证书</b>。
+              </span>
+            </p>
+            <div class="mt-auto grid grid-cols-2 gap-2">
+              <a
+                href="https://github.com/Siriusq/cycle_it/releases/download/1.0.1/Cycle.It.1.0.1.msix"
+                class="w-full block text-center py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+              >
+                MSIX
+              </a>
+              <a
+                href="https://siriusq.top/en/flutter-build-installer.html#Install-2"
+                target="_blank"
+                class="w-full block text-center py-2.5 border border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition"
+              >
+                Guide
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <p class="text-sm text-slate-400">
+            <span class="lang-en">Linux version is deprecated. </span>
+            <span class="lang-cn hidden">Linux 版本已停止维护。 </span>
+            <a
+              href="https://github.com/Siriusq/cycle_it/releases/download/1.0/cycle_it_v1.deb"
+              class="underline hover:text-slate-600 dark:hover:text-slate-200"
+              >Download v1.0</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-white dark:bg-darkbg border-t border-slate-200 dark:border-slate-800 py-12"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-slate-500 dark:text-slate-400 mb-4">
+          © 2025 Cycle It. Created by
+          <a
+            href="https://github.com/Siriusq"
+            class="text-blue-600 hover:underline"
+            >Siriusq</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // 0 = English (Default), 1 = Chinese
+      let currentLang = 0
+      const langBtnText = document.getElementById('lang-btn-text')
+      const enElements = document.querySelectorAll('.lang-en')
+      const cnElements = document.querySelectorAll('.lang-cn')
+
+      function toggleLanguage() {
+        currentLang = currentLang === 0 ? 1 : 0
+
+        if (currentLang === 1) {
+          // Switch to Chinese
+          langBtnText.textContent = 'English'
+          enElements.forEach((el) => el.classList.add('hidden'))
+          cnElements.forEach((el) => el.classList.remove('hidden'))
+        } else {
+          // Switch to English
+          langBtnText.textContent = '中文'
+          cnElements.forEach((el) => el.classList.add('hidden'))
+          enElements.forEach((el) => el.classList.remove('hidden'))
+        }
+      }
+    </script>
+  </body>
+</html>

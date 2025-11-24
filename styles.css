@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-darkbg: #0f172a;
+  --color-darkcard: #1e293b;
+}
