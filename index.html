@@ -9,11 +9,109 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Cycle It - Track · Predict · Remind</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Cycle It - Track · Predict · Remind (Recurring Task Manager)</title>
     <meta
       name="description"
-      content="Cycle It - Cross-platform recurring task manager. Track history, predict cycles, and get timely reminders."
+      content="A cross-platform app that records usage history, tracks recurring cycles, predicts the next due date, and sends reminders — helping you avoid both forgetfulness and waste."
     />
+    <meta
+      name="keywords"
+      content="cycle tracker, recurring tasks, reminder app, usage cycle, task prediction, maintenance tracker, item usage app, cross-platform app, Flutter app"
+    />
+    <meta
+      name="author"
+      content="Siriusq"
+    />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="https://siriusq.top/cycleit-site/"
+    />
+    <meta
+      property="og:title"
+      content="Cycle It — Track · Predict · Remind"
+    />
+    <meta
+      property="og:description"
+      content="Record usage history, predict cycles, and never forget another recurring task."
+    />
+    <meta
+      property="og:image"
+      content="https://siriusq.top/cycleit-site/og-preview.png"
+    />
+    <!-- replace with your image -->
+    <meta
+      property="og:site_name"
+      content="Cycle It"
+    />
+
+    <!-- Twitter -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+    <meta
+      name="twitter:url"
+      content="https://siriusq.top/cycleit-site/"
+    />
+    <meta
+      name="twitter:title"
+      content="Cycle It — Track · Predict · Remind"
+    />
+    <meta
+      name="twitter:description"
+      content="A cross-platform recurring task manager with cycle prediction and reminders."
+    />
+    <meta
+      name="twitter:image"
+      content="https://siriusq.top/cycleit-site/og-preview.png"
+    />
+    <!-- replace with your image -->
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./favicon.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./apple-touch-icon.png"
+    />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://siriusq.top/cycleit-site/"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Cycle It",
+        "operatingSystem": "iOS, Android, Windows, macOS",
+        "applicationCategory": "ProductivityApplication",
+        "description": "Track item usage cycles, predict next due dates, and receive reminders.",
+        "image": "https://siriusq.top/cycleit-site/og-preview.png",
+        "publisher": {
+          "@type": "Person",
+          "name": "Siriusq"
+        },
+        "url": "https://siriusq.top/cycleit-site/"
+      }
+    </script>
 
     <link
       href="./output.css"
@@ -60,7 +158,11 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
           <div class="flex items-center gap-2">
-            <i class="fa-solid fa-arrows-spin text-blue-600 text-2xl"></i>
+            <img
+              src="./app_logo.png"
+              alt="Cycle It Logo"
+              class="w-8 h-8 object-contain"
+            />
             <span class="font-bold text-xl text-slate-900 dark:text-white"
               >Cycle It</span
             >
@@ -97,18 +199,19 @@
             <h1
               class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6"
             >
-              <span class="lang-en inline-block whitespace-nowrap">
-                Cycle It
-              </span>
-              <span class="lang-cn hidden inline-block whitespace-nowrap">
-                循物
-              </span>
+              <span class="inline-block whitespace-nowrap"> Cycle It </span>
             </h1>
             <p
               class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              <span class="lang-en"> Track · Predict · Remind </span>
-              <span class="lang-cn hidden"> 追踪 · 预测 · 提醒 </span>
+              <span class="lang-en">
+                A cross-platform open-source app that tracks recurring item
+                usage cycles and reminds you when it's time.
+              </span>
+              <span class="lang-cn hidden">
+                一款追踪重复性物品的使用周期，并在到期时提醒您的应用。代码开源，完全免费，多平台支持。
+              </span>
+
               <br />
               <span class="lang-en">
                 Keep your recurring tasks organized, helping you avoid both
@@ -170,7 +273,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-blue-50 dark:hover:bg-slate-800 transition duration-300"
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 hover:bg-blue-50 dark:hover:bg-slate-700 transition duration-300"
           >
             <div
               class="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4"
@@ -191,8 +294,9 @@
               </span>
             </p>
           </div>
+
           <div
-            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-purple-50 dark:hover:bg-slate-800 transition duration-300"
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 hover:bg-purple-50 dark:hover:bg-slate-700 transition duration-300"
           >
             <div
               class="w-12 h-12 bg-purple-100 dark:bg-purple-900/40 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4"
@@ -213,8 +317,9 @@
               </span>
             </p>
           </div>
+
           <div
-            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-green-50 dark:hover:bg-slate-800 transition duration-300"
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 hover:bg-green-50 dark:hover:bg-slate-700 transition duration-300"
           >
             <div
               class="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-lg flex items-center justify-center text-green-600 dark:text-green-400 mb-4"
@@ -227,11 +332,79 @@
             </h3>
             <p class="text-slate-600 dark:text-slate-400">
               <span class="lang-en">
-                Available on iOS, Android, Windows, and macOS. Import/Export
-                your data anytime, anywhere.
+                Available on iOS, Android, Windows, macOS, and Linux.
               </span>
               <span class="lang-cn hidden">
-                支持 iOS, Android, Windows 和 macOS。随时随地导入/导出你的数据
+                支持 iOS, Android, Windows, macOS 和 Linux。
+              </span>
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 hover:bg-yellow-50 dark:hover:bg-slate-700 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/40 rounded-lg flex items-center justify-center text-yellow-600 dark:text-yellow-400 mb-4"
+            >
+              <i class="fa-solid fa-code-branch text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+              <span class="lang-en">Open Source</span>
+              <span class="lang-cn hidden">开源</span>
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              <span class="lang-en">
+                Open-sourced under the GPL-3.0 license, with code hosted on
+                GitHub.
+              </span>
+              <span class="lang-cn hidden">
+                以 GPL-3.0 协议开源，代码托管于 GitHub。
+              </span>
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 hover:bg-orange-50 dark:hover:bg-slate-700 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-orange-100 dark:bg-orange-900/40 rounded-lg flex items-center justify-center text-orange-600 dark:text-orange-400 mb-4"
+            >
+              <i class="fa-solid fa-gift text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+              <span class="lang-en">Free to Use</span>
+              <span class="lang-cn hidden">免费使用</span>
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              <span class="lang-en">
+                100% free. No ads, no tracking, no subscriptions, and no hidden
+                costs.
+              </span>
+              <span class="lang-cn hidden">
+                完全免费，无广告、无跟踪、无订阅、无隐藏费用。
+              </span>
+            </p>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-700/50 hover:bg-red-50 dark:hover:bg-slate-700 transition duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-red-100 dark:bg-red-900/40 rounded-lg flex items-center justify-center text-red-600 dark:text-red-400 mb-4"
+            >
+              <i class="fa-solid fa-database text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+              <span class="lang-en">Data Portability</span>
+              <span class="lang-cn hidden">数据管理</span>
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              <span class="lang-en">
+                Data stays local, import/export freely, and works across all
+                platforms—no data lost when switching devices.
+              </span>
+              <span class="lang-cn hidden">
+                数据保存在本地，可自由导入/导出，全平台互通，无需担心设备更换丢失数据。
               </span>
             </p>
           </div>
@@ -409,8 +582,10 @@
 
         <div class="mt-8 text-center">
           <p class="text-sm text-slate-400">
-            <span class="lang-en">Linux version is deprecated. </span>
-            <span class="lang-cn hidden">Linux 版本已停止维护。 </span>
+            <span class="lang-en">
+              The Linux version has been discontinued.
+            </span>
+            <span class="lang-cn hidden">Linux 版本已停止更新。 </span>
             <a
               href="https://github.com/Siriusq/cycle_it/releases/download/1.0/cycle_it_v1.deb"
               class="underline hover:text-slate-600 dark:hover:text-slate-200"
