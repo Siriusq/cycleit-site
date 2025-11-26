@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="scroll-smooth"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Cycle It - Privacy Policy</title>
+
+    <!-- Using the same CSS file -->
+    <link
+      href="./output.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      @media (prefers-color-scheme: dark) {
+        ::-webkit-scrollbar-thumb {
+          background: #475569;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="text-slate-600 bg-slate-50 dark:text-slate-300 dark:bg-darkbg transition-colors duration-300"
+  >
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full z-50 bg-white/80 dark:bg-darkbg/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center gap-2">
+            <a
+              href="index.html"
+              class="flex items-center gap-2 hover:opacity-80 transition"
+            >
+              <img
+                src="./app_logo.png"
+                alt="Cycle It Logo"
+                class="w-8 h-8 object-contain"
+              />
+              <span class="font-bold text-xl text-slate-900 dark:text-white"
+                >Cycle It</span
+              >
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="https://github.com/Siriusq/cycle_it"
+              target="_blank"
+              class="text-slate-500 hover:text-black dark:hover:text-white transition"
+            >
+              <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <button
+              onclick="toggleLanguage()"
+              class="px-3 py-1 rounded border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            >
+              <span id="lang-btn-text">中文</span>
+              <i class="fa-solid fa-language ml-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-28 pb-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white dark:bg-darkcard rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200 dark:border-slate-700"
+        >
+          <!-- Title -->
+          <h1
+            class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6"
+          >
+            <span class="lang-en"
+              ><i class="fa-solid fa-file-shield mr-2 text-blue-600"></i>
+              Privacy Policy</span
+            >
+            <span class="lang-cn hidden"
+              ><i class="fa-solid fa-file-shield mr-2 text-blue-600"></i>
+              隐私政策</span
+            >
+          </h1>
+
+          <div
+            class="text-sm text-slate-400 mb-8 pb-8 border-b border-slate-100 dark:border-slate-700"
+          >
+            <span class="lang-en">Last Updated: 2025-02-28</span>
+            <span class="lang-cn hidden">最后更新日期：2025-02-28</span>
+          </div>
+
+          <!-- Content Area -->
+          <div class="space-y-8">
+            <!-- Intro -->
+            <section>
+              <p class="lang-en leading-relaxed">
+                Cycle It ("the App") is developed and maintained by the
+                individual developer Siriusq. This application is fully
+                open-source, free to use, and designed to help users track
+                recurring item usage cycles. We take your privacy seriously.
+                This Privacy Policy explains how the App handles data.
+              </p>
+              <p class="lang-cn hidden leading-relaxed">
+                Cycle It（以下简称“本应用”）由个人开发者 Siriusq
+                开发与维护。本应用完全开源、免费使用，旨在帮助用户管理物品使用周期。我们非常重视用户隐私，因此特此声明以下隐私政策。
+              </p>
+            </section>
+
+            <!-- 1. Data Collection -->
+            <section>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                <span class="lang-en">1. What data does the App collect?</span>
+                <span class="lang-cn hidden">1. 本应用收集哪些数据？</span>
+              </h2>
+              <div class="lang-en leading-relaxed">
+                <p class="font-bold text-slate-900 dark:text-white mb-2">
+                  The App collects ZERO personal data.
+                </p>
+                <ul
+                  class="list-disc list-inside space-y-1 ml-2 text-slate-600 dark:text-slate-400"
+                >
+                  <li>No personally identifiable information</li>
+                  <li>No analytics</li>
+                  <li>No telemetry</li>
+                  <li>No data transmission to servers</li>
+                  <li>
+                    No network communication (except when the user manually
+                    exports/imports a local database and upload it)
+                  </li>
+                </ul>
+                <p class="mt-4">
+                  All item data and usage records are
+                  <strong class="text-slate-900 dark:text-white"
+                    >stored locally on your device only</strong
+                  >.
+                </p>
+              </div>
+              <div class="lang-cn hidden leading-relaxed">
+                <p class="font-bold text-slate-900 dark:text-white mb-2">
+                  本应用不收集、存储、传输任何个人信息。
+                </p>
+                <ul
+                  class="list-disc list-inside space-y-1 ml-2 text-slate-600 dark:text-slate-400"
+                >
+                  <li>不会收集任何可识别用户身份的数据</li>
+                  <li>不会上传任何信息到服务器</li>
+                  <li>不会使用分析工具或第三方 SDK</li>
+                  <li>不会访问网络（除非用户自行导入/导出本地数据库到云端）</li>
+                </ul>
+                <p class="mt-4">
+                  所有数据（物品信息、使用记录、标签等）<strong
+                    class="text-slate-900 dark:text-white"
+                    >仅保存在您的设备本地</strong
+                  >。
+                </p>
+              </div>
+            </section>
+
+            <!-- 2. Data Usage -->
+            <section>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                <span class="lang-en">2. How is the data used?</span>
+                <span class="lang-cn hidden">2. 本应用如何使用数据？</span>
+              </h2>
+              <div class="lang-en leading-relaxed">
+                <p class="mb-2">Local data is used exclusively for:</p>
+                <ul class="list-disc list-inside space-y-1 ml-2">
+                  <li>Displaying item information and usage records</li>
+                  <li>Predicting the next cycle</li>
+                  <li>Scheduling local notifications</li>
+                </ul>
+                <p class="mt-4">
+                  No data is ever sent to the developer or any third party.
+                </p>
+              </div>
+              <div class="lang-cn hidden leading-relaxed">
+                <p class="mb-2">所有数据均仅用于应用的本地功能，例如：</p>
+                <ul class="list-disc list-inside space-y-1 ml-2">
+                  <li>显示物品及使用记录</li>
+                  <li>预测下次使用周期</li>
+                  <li>安排本地通知提醒</li>
+                </ul>
+                <p class="mt-4">本应用不会将数据发送给开发者或任何第三方。</p>
+              </div>
+            </section>
+
+            <!-- 3. Permissions -->
+            <section>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                <span class="lang-en">3. Permissions</span>
+                <span class="lang-cn hidden">3. 权限说明</span>
+              </h2>
+              <div class="lang-en leading-relaxed space-y-4">
+                <p>The App may request the following permissions:</p>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">
+                    Notification Permission
+                  </h3>
+                  <p>Used only for local reminders.</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">
+                    File Access Permission (Android only)
+                  </h3>
+                  <p>Used solely for importing/exporting the local database.</p>
+                </div>
+                <p>No permission is used for tracking or data collection.</p>
+              </div>
+              <div class="lang-cn hidden leading-relaxed space-y-4">
+                <p>本应用可能会请求以下权限，用于实现功能：</p>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">
+                    通知权限（Windows / Android / macOS / iOS）
+                  </h3>
+                  <p>用于发送本地提醒，不涉及网络推送。</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">
+                    文件访问权限（Android）
+                  </h3>
+                  <p>用于用户手动导入或导出本地数据库文件。</p>
+                </div>
+                <p>这些权限仅用于对应功能，绝不会用于其他用途。</p>
+              </div>
+            </section>
+
+            <!-- 4. Control -->
+            <section>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                <span class="lang-en">4. User Data Control</span>
+                <span class="lang-cn hidden">4. 数据的控制权</span>
+              </h2>
+              <div class="lang-en leading-relaxed">
+                <p class="mb-2">You have full control over your data:</p>
+                <ul class="list-disc list-inside space-y-1 ml-2">
+                  <li>You may delete any item or record at any time</li>
+                  <li>Uninstalling the App erases all local data</li>
+                  <li>
+                    Data is never stored in the cloud unless YOU manually export
+                    and upload it
+                  </li>
+                </ul>
+              </div>
+              <div class="lang-cn hidden leading-relaxed">
+                <p class="mb-2">您对自己的数据拥有完全控制权：</p>
+                <ul class="list-disc list-inside space-y-1 ml-2">
+                  <li>可随时删除物品或记录</li>
+                  <li>可随时卸载应用以清除全部数据</li>
+                  <li>
+                    数据不会保存在云端（除非用户自行导出到 OneDrive/iCloud 等）
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- 5. Third Party -->
+            <section>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                <span class="lang-en">5. Third-Party Services</span>
+                <span class="lang-cn hidden">5. 第三方服务</span>
+              </h2>
+              <div class="lang-en leading-relaxed">
+                <p class="mb-2">
+                  The App uses
+                  <strong class="text-slate-900 dark:text-white"
+                    >no third-party services</strong
+                  >, such as:
+                </p>
+                <ul class="list-disc list-inside space-y-1 ml-2">
+                  <li>Analytics</li>
+                  <li>Ads</li>
+                  <li>Cloud services</li>
+                </ul>
+              </div>
+              <div class="lang-cn hidden leading-relaxed">
+                <p class="mb-2">
+                  本应用
+                  <strong class="text-slate-900 dark:text-white"
+                    >不使用任何第三方服务</strong
+                  >。
+                </p>
+                <p>无分析、无广告、无后端。</p>
+              </div>
+            </section>
+
+            <!-- 6. Updates -->
+            <section>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                <span class="lang-en">6. Policy Updates</span>
+                <span class="lang-cn hidden">6. 隐私政策的更新</span>
+              </h2>
+              <div class="lang-en leading-relaxed">
+                <p>
+                  Any updates to this policy will be posted on this page.
+                  Updates will not change the App’s core principle:
+                </p>
+                <p class="font-bold mt-2">
+                  local storage only, offline, no data collection.
+                </p>
+              </div>
+              <div class="lang-cn hidden leading-relaxed">
+                <p>
+                  如隐私政策更新，将在本页面同步更新。更新不会影响本应用“本地存储、不开网络、不收集数据”的核心原则。
+                </p>
+              </div>
+            </section>
+
+            <!-- 7. Contact -->
+            <section>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                <span class="lang-en">7. Contact</span>
+                <span class="lang-cn hidden">7. 联系方式</span>
+              </h2>
+              <div class="lang-en leading-relaxed">
+                <p class="mb-2">For questions or issues:</p>
+                <p>
+                  GitHub Issues:
+                  <a
+                    href="https://github.com/Siriusq/cycle_it"
+                    target="_blank"
+                    class="text-blue-600 hover:underline"
+                    >https://github.com/Siriusq/cycle_it</a
+                  >
+                </p>
+              </div>
+              <div class="lang-cn hidden leading-relaxed">
+                <p class="mb-2">如有任何问题，可通过以下方式联系开发者：</p>
+                <p>
+                  GitHub Issues:
+                  <a
+                    href="https://github.com/Siriusq/cycle_it"
+                    target="_blank"
+                    class="text-blue-600 hover:underline"
+                    >https://github.com/Siriusq/cycle_it</a
+                  >
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-white dark:bg-darkbg border-t border-slate-200 dark:border-slate-800 py-12"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-slate-500 dark:text-slate-400 mb-4">
+          © 2025 Cycle It. Created by
+          <a
+            href="https://github.com/Siriusq"
+            class="text-blue-600 hover:underline"
+            >Siriusq</a
+          >.
+        </p>
+        <div
+          class="flex justify-center gap-4 text-sm text-slate-400 dark:text-slate-500"
+        >
+          <a
+            href="index.html"
+            class="hover:text-slate-600 dark:hover:text-slate-300 transition"
+          >
+            <span class="lang-en">Home</span>
+            <span class="lang-cn hidden">返回主页</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Language Switcher Script -->
+    <script>
+      // 0 = English (Default), 1 = Chinese
+      let currentLang = 0
+      const langBtnText = document.getElementById('lang-btn-text')
+      const enElements = document.querySelectorAll('.lang-en')
+      const cnElements = document.querySelectorAll('.lang-cn')
+
+      function toggleLanguage() {
+        currentLang = currentLang === 0 ? 1 : 0
+
+        if (currentLang === 1) {
+          // Switch to Chinese
+          langBtnText.textContent = 'English'
+          enElements.forEach((el) => el.classList.add('hidden'))
+          cnElements.forEach((el) => el.classList.remove('hidden'))
+        } else {
+          // Switch to English
+          langBtnText.textContent = '中文'
+          cnElements.forEach((el) => el.classList.add('hidden'))
+          enElements.forEach((el) => el.classList.remove('hidden'))
+        }
+      }
+    </script>
+  </body>
+</html>
